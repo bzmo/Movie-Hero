@@ -20,10 +20,6 @@ class App extends Component {
       selectedVideo : null
     };
 
-    this.onMovieSelect.bind(this);
-    this.onFetchMoviesClick.bind(this);
-
-    this.videoSearch('The Dark Knight');
     this.onFetchMoviesClick();
   }
 
@@ -42,7 +38,12 @@ class App extends Component {
 
     fetch(url).then( response => {
       response.json().then( data => {
-        this.setState({movies : data.results});
+        this.setState({
+          movies : data.results,
+          selectedMovie : data.results[0].title
+        });
+
+        this.videoSearch(this.state.selectedMovie);
       });
     }).catch( err => {
       console.log(err);
@@ -60,13 +61,12 @@ class App extends Component {
           <FetchMoviesBtn onFetchMoviesClick={ () => this.onFetchMoviesClick() } />
           <MovieList movies={this.state.movies}
                      onMovieSelect={ (selectedMovie) => this.onMovieSelect(selectedMovie) } />
-                     <VideoDetail video={this.state.selectedVideo} />
-                     <VideoList videos = {this.state.videos}
-                                onVideoSelect={ selectedVideo => this.setState({selectedVideo})} />
+          <VideoDetail video={this.state.selectedVideo} />
+          <VideoList videos = {this.state.videos}
+                     onVideoSelect={ selectedVideo => this.setState({selectedVideo})} />
         </div>
       );
   }
-
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));

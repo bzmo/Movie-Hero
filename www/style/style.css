@@ -1,10 +1,12 @@
 .fetch-movies-btn {
-  margin: 20px;
-  text-aline: center;
+  position: fixed;
+  z-index: 50;
+  top: 10%;
+  left: 50%;
 }
 
 .fetch-movies-btn input {
-  width: 75%;
+  width: 100%;
 }
 
 .video-item img {
@@ -20,8 +22,23 @@
 
 .list-group-item {
   cursor: pointer;
+  width: 33.0%;
+  height: 150px;
+  float: left;
 }
 
 .list-group-item:hover {
   background-color: #eee;
+}
+
+ul .movie-description {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul .movie-description li {
+    display: block;
+    padding: 5px;
 }

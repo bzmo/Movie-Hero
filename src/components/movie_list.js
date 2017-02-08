@@ -12,16 +12,16 @@ let MovieList = ({movies, onMovieSelect}) => {
 
   const movieItems = movies.map((movie) => {
     return (
-      <MovieListItem
-        key={movie.id}
-        onMovieSelect = {onMovieSelect}
-        movie={movie}
-      />
+        <MovieListItem
+          key={movie.id}
+          onMovieSelect = {onMovieSelect}
+          movie={movie}
+          />
     )
   });
 
   return (
-    <ul>
+    <ul className="col-md-20 list-inline">
       {movieItems}
     </ul>
   );

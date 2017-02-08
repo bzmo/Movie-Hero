@@ -1,8 +1,26 @@
 import React from 'react';
+const BASE_URL = 'https://image.tmdb.org/t/p/w92/';
 
 let MovieListItem = ({ movie, onMovieSelect }) => {
+
+  // Truncate movie.title if it too long
+  let title = movie.title;
+  if (title.length > 15) {
+    title = title.slice(0, 15) + "...";
+  }
+
+  // Slice movie.release_date to get only year
+  let year = movie.release_date.slice(0,4);
+
   return (
-    <li onClick= { () => { onMovieSelect(movie.title) }} > {movie.title} </li>
+    <li onClick= { () => { onMovieSelect(movie.title) }} className="list-group-item">
+        <img src={ BASE_URL + movie.poster_path } />
+        <ul className="movie-description">
+          <li className=""> { title } </li>
+          <li> Rating: { movie.vote_average } </li>
+          <li> Release: { year } </li>
+        </ul>
+    </li>
   );
 }
 

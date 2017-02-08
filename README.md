@@ -1,20 +1,9 @@
 This React app allows you to randomly select a movie and immediately preview it.
 
 
-npm start
-
 ```
+npm install
 npm start 
 ```
 
-npm install
-
-```
-npm install
-```
-
-Compile
-
-```
-Compile
-```
+And then go to localhost:3000

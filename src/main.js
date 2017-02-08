@@ -14,20 +14,20 @@ class App extends Component {
     super(props);
 
     this.state = {
-      movies : [],
-      videos : [],
+      movies : [],             // Array of Movie Objects from themoviedb
+      videos : [],             // Array of Video Objects from youtube-api-search
       selectedMovie : null,
       selectedVideo : null
     };
 
-    this.onFetchMoviesClick();
+    this.onFetchMoviesClick(); // Init with randomized movies
   }
 
   videoSearch(term) {
     YTSearch({key: YT_API_KEY, term : `${term} trailer`}, (videos) => {
       this.setState({
-        videos : videos.slice(0, 3),
-        selectedVideo : videos[0]
+        videos : videos.slice(0, 3),  // Get only 3 videos
+        selectedVideo : videos[0]     // Select only 1st video
       })
     });
   }
@@ -36,6 +36,7 @@ class App extends Component {
     let pageCount = Math.floor(Math.random() * MAX_PAGE_COUNT) + 1;
     let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${THEMOVIEDB_API_KEY}&language=en-US&page=${pageCount}`;
 
+    // GET Request to retrieve the array of movie objects
     fetch(url).then( response => {
       response.json().then( data => {
         this.setState({
@@ -43,7 +44,7 @@ class App extends Component {
           selectedMovie : data.results[0].title
         });
 
-        this.videoSearch(this.state.selectedMovie);
+        this.videoSearch(this.state.selectedMovie); // Change state of videos
       });
     }).catch( err => {
       console.log(err);

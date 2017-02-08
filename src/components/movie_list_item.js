@@ -1,7 +1,7 @@
 import React from 'react';
-const BASE_URL = 'https://image.tmdb.org/t/p/w92/';
+const BASE_URL = 'https://image.tmdb.org/t/p/w92/'; // to retrieve poster img
 
-let MovieListItem = ({ movie, onMovieSelect }) => {
+const MovieListItem = ({ movie, onMovieSelect }) => {
 
   // Truncate movie.title if it too long
   let title = movie.title;

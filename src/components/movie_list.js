@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieListItem from './movie_list_item';
 
-let MovieList = ({movies, onMovieSelect}) => {
+const MovieList = ({movies, onMovieSelect}) => {
 
   // Check if the movies have been found
   if (!movies) {
@@ -13,10 +13,10 @@ let MovieList = ({movies, onMovieSelect}) => {
   const movieItems = movies.map((movie) => {
     return (
         <MovieListItem
-          key={movie.id}
-          onMovieSelect = {onMovieSelect}
-          movie={movie}
-          />
+          key={ movie.id }
+          onMovieSelect={ onMovieSelect }
+          movie={ movie }
+        />
     )
   });
 

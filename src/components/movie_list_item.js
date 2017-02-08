@@ -3,7 +3,7 @@ const BASE_URL = 'https://image.tmdb.org/t/p/w92/'; // to retrieve poster img
 
 const MovieListItem = ({ movie, onMovieSelect }) => {
 
-  // Truncate movie.title if it too long
+  // Truncate movie.title if it's too long
   let title = movie.title;
   if (title.length > 15) {
     title = title.slice(0, 15) + "...";

@@ -60,11 +60,11 @@ class App extends Component {
       return (
         <div>
           <FetchMoviesBtn onFetchMoviesClick={ () => this.onFetchMoviesClick() } />
-            <MovieList movies={this.state.movies}
-                       onMovieSelect={ (selectedMovie) => this.onMovieSelect(selectedMovie) } />
-            <VideoDetail video={this.state.selectedVideo} />
-            <VideoList videos = {this.state.videos}
-                       onVideoSelect={ selectedVideo => this.setState({selectedVideo})} />
+          <MovieList movies={this.state.movies}
+                     onMovieSelect={ (selectedMovie) => this.onMovieSelect(selectedMovie) } />
+          <VideoDetail video={this.state.selectedVideo} />
+          <VideoList videos = {this.state.videos}
+                     onVideoSelect={ selectedVideo => this.setState({selectedVideo})} />
         </div>
       );
   }

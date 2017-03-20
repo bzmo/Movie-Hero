@@ -1,9 +1,11 @@
-This React app allows you to randomly select a movie and immediately preview it.
+<b>React-Choose-Movie</b>
 
+Allows you to select a random movie and immediately preview its trailer, using TMDB and Youtube APIs.
 
+<b>To Start</b>
 ```
 npm install
 npm start 
 ```
 
-And then go to localhost:3000
+And then go to localhost:3000.

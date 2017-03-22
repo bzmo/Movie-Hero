@@ -2,7 +2,7 @@
 
 Allows you to select a random movie and immediately preview its trailer, using TMDB and Youtube APIs.
 
-<b>To Start</b>
+<b>To Start:</b>
 ```
 npm install
 npm start 

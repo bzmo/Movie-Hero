@@ -1,11 +1,23 @@
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  background: #8E0E00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #8E0E00 , #1F1C18); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #8E0E00 , #1F1C18); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .fetch-movies-btn {
   position: relative;
   top: 50%;
-  left: 45%;
-  margin-top: -100px;
-  margin-left: -200px;
+  left: 40%;
+  border-radius: 10px;
 
-  background: #428BCA;
+  background: #8E0E00;
   color: #fff;
   font-family: Sans-serif;
   font-size: 20px;
@@ -14,12 +26,21 @@
   line-height: 60px;
   margin: 25px 25px;
   text-align: center;
-  border: 0;
+  border: 5;
   transition: all 0.3s ease 0s;
 }
 
 .fetch-movies-btn:hover {
   opacity: 0.75;
+}
+
+.fetch-movies-btn:focus {
+  outline: none;
+}
+
+.info {
+  font-family: sans-serif;
+  color: white;
 }
 
 .video-item img {
@@ -31,6 +52,9 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  background: #8E0E00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8E0E00 , #1F1C18); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8E0E00 , #1F1C18); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .list-group-item {
@@ -38,10 +62,19 @@
   width: 33.0%;
   height: 150px;
   float: left;
+  border-radius: 4px;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.list-group-item:active {
+  position:relative;
+  top:1px;
 }
 
 .list-group-item:hover {
-  background-color: #eee;
+  opacity: 0.75;
 }
 
 ul .movie-description {

@@ -58,10 +58,10 @@ class App extends Component {
 
   render() {
       return (
-        <div>
+        <div className="container">
           <FetchMoviesBtn onFetchMoviesClick={ () => this.onFetchMoviesClick() } />
           <MovieList movies={this.state.movies}
-                     onMovieSelect={ (selectedMovie) => this.onMovieSelect(selectedMovie) } />
+                     onMovieSelect={ selectedMovie => this.onMovieSelect(selectedMovie) } />
           <VideoDetail video={this.state.selectedVideo} />
           <VideoList videos = {this.state.videos}
                      onVideoSelect={ selectedVideo => this.setState({selectedVideo})} />

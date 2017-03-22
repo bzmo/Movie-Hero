@@ -20,7 +20,7 @@ const VideoList = ({videos, onVideoSelect}) => {
   });
 
   return (
-      <ul className="col-md-20 list-inline">
+      <ul className="list-inline">
         {videoItems}
       </ul>
   );

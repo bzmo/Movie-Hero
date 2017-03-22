@@ -16,9 +16,9 @@ const MovieListItem = ({ movie, onMovieSelect }) => {
     <li onClick= { () => { onMovieSelect(movie.title) }} className="list-group-item">
         <img src={ BASE_URL + movie.poster_path } />
         <ul className="movie-description">
-          <li className=""> { title } </li>
-          <li> Rating: { movie.vote_average } </li>
-          <li> Release: { year } </li>
+          <li className="info"> { title } </li>
+          <li className="info"> Rating: { movie.vote_average } </li>
+          <li className="info"> Release: { year } </li>
         </ul>
     </li>
   );

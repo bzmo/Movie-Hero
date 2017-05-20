@@ -1,4 +1,4 @@
-<b>React-Choose-Movie</b>
+<b>Movie-Hero</b>
 
 Allows you to select a random movie and immediately preview its trailer, using TMDB and Youtube APIs.
 

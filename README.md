@@ -1,4 +1,4 @@
-<b>Movie-Hero</b>
+<b>Movie Selectr</b>
 
 Allows you to select a random movie and immediately preview its trailer, using TMDB and Youtube APIs.
 
